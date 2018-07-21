@@ -93,7 +93,26 @@ new Dynamico("http://ecloga.org/projects/dynamico",
 * layout = Container layout that will contain the loaded views from the json
 
 ```java
-new Dynamico("http://ecloga.org/projects/dynamico",
+
+StringBuilder sb = new StringBuilder("{\n" +
+                "  \"views\":[\n" +
+                "    {  \n" +
+                "      \"class\":\"android.widget.TextView\",\n" +
+                "      \"attributes\":{  \n" +
+                "        \"text\":\"Sample text\",\n" +
+                "        \"textColor\":\"#FF69B4\"\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {  \n" +
+                "      \"class\":\"android.widget.ImageView\",\n" +
+                "      \"attributes\":{\n" +
+                "        \"src\": \"https://cdn69.picsart.com/186273671000202.jpg?r1024x1024\"\n" +
+                "      }\n" +
+                "    }\n" +
+                "  ]\n" +
+                "}");
+
+new Dynamico(sb,
     "activity_main",
     findViewById(R.id.mainLayout))
     .initialize();
