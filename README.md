@@ -87,6 +87,17 @@ new Dynamico("http://ecloga.org/projects/dynamico",
     .initialize();
 ```
 
+3b. Initialize Dynamico by passing it:
+* JSONStringBuilder = JSON string inside a StringBuilder **directory**
+* name = Name of JSON layout so it can be use for cache porpuses  **file**
+* layout = Container layout that will contain the loaded views from the json
+
+```java
+new Dynamico("http://ecloga.org/projects/dynamico",
+    "activity_main",
+    findViewById(R.id.mainLayout))
+    .initialize();
+```
 
 ## Manual
 
